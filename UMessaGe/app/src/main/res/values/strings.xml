@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">UMessaGe</string>
+    <string name="background">background</string>
+    <string name="password">Contraseña</string>
+    <string name="email">Correo Electronico</string>
+    <string name="login">Iniciar Sesion</string>
+    <string name="login_opc">Ingresar</string>
+    <string name="registrarse_opc">Registrarse</string>
 </resources>
