@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LoginActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_login"
@@ -16,6 +16,7 @@
         android:text="@string/login"
         android:textColor="@color/white"
         android:textSize="18sp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -26,11 +27,13 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50dp"
         android:layout_marginVertical="15sp"
+        android:layout_marginBottom="16dp"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:textColor="@color/hint_login"
         app:layout_constraintBottom_toTopOf="@+id/etbPassword"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -38,52 +41,80 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50dp"
-        android:layout_marginBottom="35dp"
+        android:layout_marginBottom="64dp"
         android:hint="@string/password"
         android:inputType="textPassword"
         android:textColor="@color/hint_login"
         app:layout_constraintBottom_toTopOf="@+id/btnIniciarSesion"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/txvIngresar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="35dp"
-        android:gravity="center"
-        android:text="@string/login_opc"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@id/etbEmail"
-        app:layout_constraintEnd_toStartOf="@id/txvRegistrarse"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/txvRegistrarse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="35dp"
-        android:gravity="center"
-        android:text="@string/registrarse_opc"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@id/etbEmail"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/txvIngresar" />
-
-    <TextView
-        android:id="@+id/txlogo"
+        android:id="@+id/txvlogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="140dp"
         android:text="@string/app_name"
-        android:textAppearance="bold"
         android:textColor="@color/umessage_logo"
         android:textSize="40sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="@string/register_acount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnIniciarSesion" />
+
+    <LinearLayout
+        android:id="@+id/llRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/tvRegister"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etbPassword"
+        app:layout_constraintVertical_bias="0.0">
+
+        <EditText
+            android:id="@+id/etbConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="25dp"
+            android:hint="@string/confirm_password"
+            android:inputType="textPassword"
+            android:textColor="@color/hint_login"
+            app:layout_constraintBottom_toTopOf="@+id/btnIniciarSesion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="148dp"
+            android:backgroundTint="@color/login_button"
+            android:text="@string/registrarse_opc"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
